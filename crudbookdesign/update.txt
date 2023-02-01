@@ -48,13 +48,7 @@ SuccessResponse:
                 author: string  
                 genre: string
 
-FailureResponse:
-    type: object
-    status: 401
-    properties:
-        message:
-            type: string
-            example: 'failure - book not found'
+
 
 
                 
