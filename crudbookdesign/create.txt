@@ -54,11 +54,18 @@ SuccessResponse:
                 genre: string
                 _id: string
 
-
-const newUser = await Book.make(req.body)
-const successResponse = {message: "success", newUser: newUser}
-
-res.status(201).json(successResponse)
+ErrorResponse:
+    type: object
+    status: 501
+    properties:
+        message:
+            type: string    
+            example: 'error'
+        error:
+            type: object
+            description: the error
+            properties:
+                error: error
 
 
 

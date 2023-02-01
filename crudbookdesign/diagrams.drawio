@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pUxhKtIyQ2GWUsUmZcXt" name="create">
-        <mxGraphModel dx="737" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="907" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -25,16 +25,19 @@
                 <mxCell id="9" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="7" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="145" y="255" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="210" y="255"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="12" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="279" y="210" width="256" height="60" as="geometry"/>
+                    <mxGeometry x="279" y="130" width="256" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="/books/createbook" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="377" y="240" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="384" y="160" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.838;entryY=1.042;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="11" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -49,19 +52,19 @@
                     <mxGeometry x="57.5" y="200" width="55" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="377" y="210" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="377" y="140" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="140" width="170" height="60" as="geometry"/>
+                    <mxGeometry x="120" y="95" width="170" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="Clients sends body to server with book title, author and genre" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="125" y="155" width="160" height="30" as="geometry"/>
+                    <mxGeometry x="125" y="110" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="23" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="280" width="130" height="60" as="geometry"/>
+                    <mxGeometry x="160" y="280" width="130" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="Server sends response with SuccessResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="180" y="290" width="90" height="30" as="geometry"/>
+                <mxCell id="24" value="Server sends response with SuccessResponse&lt;br&gt;OR&lt;br&gt;ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="290" width="90" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="Recieves response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="30" y="260" width="112.5" height="20" as="geometry"/>
@@ -78,11 +81,17 @@
                 <mxCell id="30" value="DB sends data to server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="400.5" y="330" width="100" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="-oO10R8kHT4ZSKqqCji3-33" value="If error: send ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="190" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-oO10R8kHT4ZSKqqCji3-34" value="Else: continue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="225" width="200" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="read" id="1bmPkbLqcyllTP1I2SIQ">
-        <mxGraphModel dx="737" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="907" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-0"/>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-1" parent="XK0KW5p3m_ieIov8ZeSZ-0"/>
@@ -113,10 +122,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-9" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
-                    <mxGeometry x="279" y="210" width="256" height="60" as="geometry"/>
+                    <mxGeometry x="286" y="155" width="256" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-10" value="/books/getallbooks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
-                    <mxGeometry x="338.5" y="240" width="137" height="30" as="geometry"/>
+                    <mxGeometry x="350" y="180" width="137" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-11" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.838;entryY=1.042;entryDx=0;entryDy=0;entryPerimeter=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" source="XK0KW5p3m_ieIov8ZeSZ-12" target="XK0KW5p3m_ieIov8ZeSZ-9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -131,7 +140,7 @@
                     <mxGeometry x="57.5" y="200" width="55" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-15" value="Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
-                    <mxGeometry x="377" y="210" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="384" y="160" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-16" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
                     <mxGeometry x="100" y="110" width="200" height="90" as="geometry"/>
@@ -140,10 +149,10 @@
                     <mxGeometry x="137.5" y="140" width="135" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-18" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
-                    <mxGeometry x="160" y="280" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="160" y="340" width="120" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="XK0KW5p3m_ieIov8ZeSZ-19" value="Server sends response with SuccessResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
-                    <mxGeometry x="175" y="290" width="90" height="30" as="geometry"/>
+                <mxCell id="XK0KW5p3m_ieIov8ZeSZ-19" value="Server sends response with SuccessResponse&lt;br&gt;OR&lt;br&gt;ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
+                    <mxGeometry x="175" y="350" width="90" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-20" value="Recieves response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
                     <mxGeometry x="23.75" y="260" width="122.5" height="20" as="geometry"/>
@@ -160,11 +169,17 @@
                 <mxCell id="XK0KW5p3m_ieIov8ZeSZ-24" value="DB sends data to server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XK0KW5p3m_ieIov8ZeSZ-1" vertex="1">
                     <mxGeometry x="400.5" y="330" width="100" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="omSE_Gh30TyEoFmnVXLz-0" value="If error: send ErrorResponse&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="XK0KW5p3m_ieIov8ZeSZ-1">
+                    <mxGeometry x="300" y="205" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="GUs67eeJRfkRtkhuteBI-0" value="Else: continue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="XK0KW5p3m_ieIov8ZeSZ-1">
+                    <mxGeometry x="310" y="240" width="220" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="delete" id="lRECdVPwTVvK4dmT-ItU">
-        <mxGraphModel dx="737" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="907" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-0"/>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-1" parent="r6AK_KyBQX7YeuI_mlSn-0"/>
@@ -195,10 +210,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-9" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="279" y="210" width="256" height="60" as="geometry"/>
+                    <mxGeometry x="279" y="160" width="256" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-10" value="/books/deletebook" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="338.5" y="240" width="137" height="30" as="geometry"/>
+                    <mxGeometry x="338.5" y="180" width="137" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-11" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.838;entryY=1.042;entryDx=0;entryDy=0;entryPerimeter=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" source="r6AK_KyBQX7YeuI_mlSn-12" target="r6AK_KyBQX7YeuI_mlSn-9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -213,7 +228,7 @@
                     <mxGeometry x="57.5" y="200" width="55" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-15" value="Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="377" y="210" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="377" y="160" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-16" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
                     <mxGeometry x="100" y="110" width="200" height="90" as="geometry"/>
@@ -222,10 +237,10 @@
                     <mxGeometry x="137.5" y="140" width="135" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-18" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="160" y="280" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="159" y="350" width="120" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="r6AK_KyBQX7YeuI_mlSn-19" value="Server sends response with SuccessResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="175" y="290" width="90" height="30" as="geometry"/>
+                <mxCell id="r6AK_KyBQX7YeuI_mlSn-19" value="Server sends response with SuccessResponse&lt;br&gt;OR&lt;br&gt;ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
+                    <mxGeometry x="174" y="360" width="90" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-20" value="Recieves response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
                     <mxGeometry x="23.75" y="260" width="122.5" height="20" as="geometry"/>
@@ -237,16 +252,22 @@
                     <mxGeometry x="580" y="300" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-23" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="390" y="320" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="380.5" y="330" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="r6AK_KyBQX7YeuI_mlSn-24" value="DB sends data to server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="r6AK_KyBQX7YeuI_mlSn-1" vertex="1">
-                    <mxGeometry x="400.5" y="330" width="100" height="30" as="geometry"/>
+                    <mxGeometry x="395" y="345" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cjh53f8CE0Nhmdzx6XaR-0" value="If error: send error response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r6AK_KyBQX7YeuI_mlSn-1">
+                    <mxGeometry x="290" y="210" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cjh53f8CE0Nhmdzx6XaR-1" value="else: continue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r6AK_KyBQX7YeuI_mlSn-1">
+                    <mxGeometry x="290" y="250" width="240" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="update" id="RYXbOpJzDa8Bz0UPD5AR">
-        <mxGraphModel dx="737" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="907" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Txcele6qm6IQGyezpnuU-0"/>
                 <mxCell id="Txcele6qm6IQGyezpnuU-1" parent="Txcele6qm6IQGyezpnuU-0"/>
@@ -277,10 +298,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="Txcele6qm6IQGyezpnuU-9" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
-                    <mxGeometry x="310" y="170" width="225" height="110" as="geometry"/>
+                    <mxGeometry x="310" y="170" width="225" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="Txcele6qm6IQGyezpnuU-10" value="/books/updatebookauthor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
-                    <mxGeometry x="348" y="205" width="137" height="30" as="geometry"/>
+                    <mxGeometry x="348" y="200" width="137" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="Txcele6qm6IQGyezpnuU-11" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.838;entryY=1.042;entryDx=0;entryDy=0;entryPerimeter=0;" parent="Txcele6qm6IQGyezpnuU-1" source="Txcele6qm6IQGyezpnuU-12" target="Txcele6qm6IQGyezpnuU-9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -304,10 +325,10 @@
                     <mxGeometry x="137.5" y="110" width="135" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="Txcele6qm6IQGyezpnuU-18" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
-                    <mxGeometry x="160" y="280" width="90" height="60" as="geometry"/>
+                    <mxGeometry x="160" y="280" width="110" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="Txcele6qm6IQGyezpnuU-19" value="Server sends response with data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
-                    <mxGeometry x="160" y="290" width="90" height="30" as="geometry"/>
+                <mxCell id="Txcele6qm6IQGyezpnuU-19" value="Server sends response with SuccessResponse&lt;br&gt;OR&lt;br&gt;ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
+                    <mxGeometry x="165" y="285" width="100" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="Txcele6qm6IQGyezpnuU-20" value="Recieves response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
                     <mxGeometry x="23.75" y="260" width="122.5" height="20" as="geometry"/>
@@ -329,6 +350,12 @@
                 </mxCell>
                 <mxCell id="6O4shS88H-pfWAXodQgN-11" value="DB sends book to server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Txcele6qm6IQGyezpnuU-1" vertex="1">
                     <mxGeometry x="375" y="12.5" width="110" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="77uhSpD_ZsJwmg94RqTi-0" value="If error: send ErrorResponse" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="Txcele6qm6IQGyezpnuU-1">
+                    <mxGeometry x="324" y="225" width="196" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="77uhSpD_ZsJwmg94RqTi-1" value="else: continue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="Txcele6qm6IQGyezpnuU-1">
+                    <mxGeometry x="340.5" y="250" width="159.5" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

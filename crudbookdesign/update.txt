@@ -48,7 +48,18 @@ SuccessResponse:
                 author: string  
                 genre: string
 
-
+ErrorResponse:
+    type: object
+    status: 501
+    properties:
+        message:
+            type: string    
+            example: 'error'
+        error:
+            type: object
+            description: the error
+            properties:
+                error: error
 
 
                 
