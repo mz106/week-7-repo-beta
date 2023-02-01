@@ -49,6 +49,12 @@ app.use("/html", (req, res) => {
 // Explain that this route is getting a request from the client (TC) and esnding back a response.
 // Ask students what could happen here (hint at db operation)
 
+// Again, go to the browser and navigate to http://localhost:5001/book and go to the network tab
+// on inspection tools.
+// Show students the GET request and the route (or file as it is shown).
+// Ask about the 404 response for the favicon - there is no favicon found so a response of status 404
+// 'Not found' is sent from the server.
+
 app.get("/book", (req, res) => {
   const book = {
     title: "lord of the rings",
