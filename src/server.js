@@ -1,35 +1,39 @@
 // Step 1 - Create /books/routes.js and /books/controllers.js
-// Step 2 - Add POST /books/addbook to /books/routes and /books/controllers
+// Step 2 - Add POST /books/addbook to /books/routes and /books/controllers --- starts on /books/routes.js
 
 require("dotenv").config();
 require("./db/connection");
 const express = require("express");
 const port = process.env.PORT;
-console.log("port: ", port, "typeof port: ", typeof port);
+
 const Book = require("./books/model");
+const userRouter = require("./books/routes");
 
 const app = express();
 
 app.use(express.json());
 
-// Step 1a - copy below POST route and
+// step 2c - add userRouter
+app.use(userRouter);
+
+// Step 2b - copy below POST /books/addbook and move to /books/routes.js
 
 //=========== https://mongoosejs.com/docs/models.html --- under 'Constructing Documents' =================
-app.post("/books/addbook", async (req, res) => {
-  console.log("req.body: ", req.body);
-  const newBook = await Book.create({
-    title: req.body.title,
-    author: req.body.author,
-    genre: req.body.genre,
-  });
+// app.post("/books/addbook", async (req, res) => {
+//   console.log("req.body: ", req.body);
+//   const newBook = await Book.create({
+//     title: req.body.title,
+//     author: req.body.author,
+//     genre: req.body.genre,
+//   });
 
-  const successResponse = {
-    message: "success",
-    newBook: newBook,
-  };
+//   const successResponse = {
+//     message: "success",
+//     newBook: newBook,
+//   };
 
-  res.status(201).json(successResponse);
-});
+//   res.status(201).json(successResponse);
+// });
 
 app.get("/books/getallbooks", async (req, res) => {
   //================ https://mongoosejs.com/docs/api.html#model_Model-find --- under 'Model.find()' ====
