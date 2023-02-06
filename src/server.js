@@ -1,6 +1,5 @@
-// Step 1 - Add html route
-// Step 2 - Add get route /books
-// Step 3 - Add post route /books
+// Step 1 - Add get route /books
+// Step 2 - Add post route /books
 
 const express = require("express");
 
@@ -8,48 +7,14 @@ const app = express();
 
 app.use(express.json());
 
-// step 1a - Add the following variable with string
-// explain that the browser will read this and convert it to html
-const html = `
-    <body>
-        <header>
-            <h2>Michael's Awesome Website</h2>
-            <nav>
-                <ul>
-                    <li>About</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Michael's Awesome Website!!!</h1>
-            <p>Lot's of stuff here!!!</p>
-        </main>
-    </body>
-`;
-
-//step 1b - add the following route and show in browser.
+//step 1a - add the following route and show in browser.
 // raise differences in using the static route the previous day
 // State that previsouly, we just connected to the static files with Express,
 // but now we are sending a response using the below code to send a string.
 // The response is to a http GET request that will automatically be sent by the
 // browser (the user agent)
-
-// Go to the browser and navigate to http://localhost:5001/html (or the particular that you are using).
-// Go to the network tab on the inspection tools and show the get request to the server address (http://localhost:5001/html).
-// Explain that this is the GET request to 'get' the data from the server from the particular route,
-// in this case '/html'
-// Refer back to slides and explain the journey in the context of this route.
-
-// Then use TC to get the response and explain that TC is like a bargain basement browser where we can send requests
-// and get responses.
-
-app.use("/html", (req, res) => {
-  res.send(html);
-});
-
-// step 2a - write a get route /book
 // send back below object and relate to previous day's slides on user/client/server
-// Explain that this route is getting a request from the client (TC) and esnding back a response.
+// Explain that this route is getting a request from the client (TC) and sending back a response.
 // Ask students what could happen here (hint at db operation)
 
 // Again, go to the browser and navigate to http://localhost:5001/book and go to the network tab
