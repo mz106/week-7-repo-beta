@@ -1,5 +1,7 @@
 // Step 1 - Create /books/routes.js and /books/controllers.js
 // Step 2 - Add POST /books/addbook to /books/routes and /books/controllers --- starts on /books/routes.js
+// Step 3 - Add try catch and errorResponse to /books/addbook in books/controllers.js
+// Step 4 - Student task to move following routes/functions to seperate files.
 
 require("dotenv").config();
 require("./db/connection");
