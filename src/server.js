@@ -1,5 +1,7 @@
 // Step 1 - Add get route /books
 // Step 2 - Add post route /books
+// Step 3 - Student Activity - make more routes for different things and practice
+//          request/response on TC
 
 const express = require("express");
 
@@ -41,7 +43,7 @@ app.get("/book", (req, res) => {
   res.status(200).json(successResponse);
 });
 
-// step 3a - write post route /book
+// step 2a - write post route /book
 
 // Use TC to send a body and get a response. Explain how our route (or the callback) has manipulated the
 // data brought in the body and sent it back in a response.
