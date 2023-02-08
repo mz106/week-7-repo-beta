@@ -1,9 +1,14 @@
 // step 2a - import express, initilise router and export router
 const { Router } = require("express");
-const userRouter = Router();
+const bookRouter = Router();
 
 const Book = require("./model");
-const { addBook } = require("./controllers");
+const {
+  addBook,
+  getAllBooks,
+  updateBookAuthor,
+  deleteBook,
+} = require("./controllers");
 
 // step 2b - paste POST /books/addbook here and change 'app.post' to 'userRouter.post'
 // step 2c - add import to server.js and put in app.use
@@ -29,6 +34,46 @@ const { addBook } = require("./controllers");
 //   res.status(201).json(successResponse);
 // });
 
-userRouter.post("/books/addbook", addBook);
+// Student task
 
-module.exports = userRouter;
+// bookRouter.get("/books/getallbooks", async (req, res) => {
+//   //================ https://mongoosejs.com/docs/api.html#model_Model-find --- under 'Model.find()' ====
+
+//   const allBooks = await Book.find({});
+//   console.log("allBooks: ", allBooks);
+
+//   const successResponse = {
+//     message: "success",
+//     books: allBooks,
+//   };
+//   res.status(200).json(successResponse);
+// });
+
+// bookRouter.put("/books/updatebookauthor", async (req, res) => {
+//   const result = await Book.updateOne(
+//     { title: req.body.title },
+//     { author: req.body.newAuthor }
+//   );
+//   console.log("result: ", result);
+//   const successResponse = {
+//     message: "success",
+//     updatedBook: updatedBook,
+//   };
+//   res.status(201).json(successResponse);
+// });
+
+// bookRouter.delete("/books/deletebook", async (req, res) => {
+//   const result = await Book.deleteOne({ title: req.body.title });
+//   console.log(result);
+//   const successResponse = {
+//     message: "successfully deleted",
+//   };
+//   res.status(201).json(successResponse);
+// });
+
+bookRouter.post("/books/addbook", addBook);
+bookRouter.get("/books/getallbooks", getAllBooks);
+bookRouter.put("/books/updatebookauthor", updateBookAuthor);
+bookRouter.delete("/books/deletebook", deleteBook);
+
+module.exports = bookRouter;

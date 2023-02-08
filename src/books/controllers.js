@@ -27,6 +27,67 @@ const addBook = async (req, res) => {
   }
 };
 
+const getAllBooks = async (req, res) => {
+  try {
+    const allBooks = await Book.find({});
+    console.log("allBooks: ", allBooks);
+
+    const successResponse = {
+      message: "success",
+      books: allBooks,
+    };
+    res.status(200).json(successResponse);
+  } catch (error) {
+    const errorResponse = {
+      message: "error",
+      error: error,
+    };
+    res.status(501).json(errorResponse);
+  }
+};
+
+const updateBookAuthor = async (req, res) => {
+  try {
+    const result = await Book.updateOne(
+      { title: req.body.title },
+      { author: req.body.newAuthor }
+    );
+    console.log("result: ", result);
+    const successResponse = {
+      message: "success",
+      result: result,
+    };
+    res.status(201).json(successResponse);
+  } catch (error) {
+    console.log("!!!!! error: ", error);
+    const errorResponse = {
+      message: "error",
+      error: error,
+    };
+    res.status(501).json(errorResponse);
+  }
+};
+
+const deleteBook = async (req, res) => {
+  try {
+    const result = await Book.deleteOne({ title: req.body.title });
+    console.log(result);
+    const successResponse = {
+      message: "successfully deleted",
+    };
+    res.status(201).json(successResponse);
+  } catch (error) {
+    const errorResponse = {
+      message: "error",
+      error: error,
+    };
+    res.status(501).json(errorResponse);
+  }
+};
+
 module.exports = {
   addBook,
+  getAllBooks,
+  updateBookAuthor,
+  deleteBook,
 };

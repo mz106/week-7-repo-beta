@@ -41,12 +41,14 @@ SuccessResponse:
         message:
             type: string
             example: 'success'
-        updatedBook:
+        result:
             type: object
             properties:
-                title: string
-                author: string  
-                genre: string
+                acknowledged: boolean,
+                modifiedCount: number,
+                upsertedId: number | null,
+                upsertedCount: number,
+                matchedCount: number
 
 ErrorResponse:
     type: object

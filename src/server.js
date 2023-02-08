@@ -6,17 +6,19 @@
 require("dotenv").config();
 require("./db/connection");
 const express = require("express");
+const cors = require("cors");
 const port = process.env.PORT;
 
 const Book = require("./books/model");
-const userRouter = require("./books/routes");
+const bookRouter = require("./books/routes");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // step 2c - add userRouter
-app.use(userRouter);
+app.use(bookRouter);
 
 // Step 2b - copy below POST /books/addbook and move to /books/routes.js
 
@@ -37,39 +39,45 @@ app.use(userRouter);
 //   res.status(201).json(successResponse);
 // });
 
-app.get("/books/getallbooks", async (req, res) => {
-  //================ https://mongoosejs.com/docs/api.html#model_Model-find --- under 'Model.find()' ====
+// Step 4 - Student Task - move following routes in similar manner to POST route
 
-  const allBooks = await Book.find({});
-  console.log("allBooks: ", allBooks);
+// app.get("/books/getallbooks", async (req, res) => {
+//   //================ https://mongoosejs.com/docs/api.html#model_Model-find --- under 'Model.find()' ====
 
-  const successResponse = {
-    message: "success",
-    books: allBooks,
-  };
-  res.status(200).json(successResponse);
-});
+//   const allBooks = await Book.find({});
+//   console.log("allBooks: ", allBooks);
 
-app.put("/books/updatebookauthor", async (req, res) => {
-  const result = await Book.updateOne(
-    { title: req.body.title },
-    { author: req.body.newAuthor }
-  );
-  console.log("result: ", result);
-  const successResponse = {
-    message: "success",
-    updatedBook: updatedBook,
-  };
-  res.status(201).json(successResponse);
-});
+//   const successResponse = {
+//     message: "success",
+//     books: allBooks,
+//   };
+//   res.status(200).json(successResponse);
+// });
 
-app.delete("/books/deletebook", async (req, res) => {
-  const result = await Book.deleteOne({ title: req.body.title });
-  console.log(result);
-  const successResponse = {
-    message: "successfully deleted",
-  };
-  res.status(201).json(successResponse);
+// app.put("/books/updatebookauthor", async (req, res) => {
+//   const result = await Book.updateOne(
+//     { title: req.body.title },
+//     { author: req.body.newAuthor }
+//   );
+//   console.log("result: ", result);
+//   const successResponse = {
+//     message: "success",
+//     updatedBook: updatedBook,
+//   };
+//   res.status(201).json(successResponse);
+// });
+
+// app.delete("/books/deletebook", async (req, res) => {
+//   const result = await Book.deleteOne({ title: req.body.title });
+//   console.log(result);
+//   const successResponse = {
+//     message: "successfully deleted",
+//   };
+//   res.status(201).json(successResponse);
+// });
+
+app.get("/health", (req, res) => {
+  res.status(201).json({ message: "API is working" });
 });
 
 app.listen(port, () => console.log(`Server is listening on ${port}`));
