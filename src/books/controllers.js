@@ -30,7 +30,6 @@ const addBook = async (req, res) => {
 const getAllBooks = async (req, res) => {
   try {
     const allBooks = await Book.find({});
-    console.log("allBooks: ", allBooks);
 
     const successResponse = {
       message: "success",
@@ -47,6 +46,7 @@ const getAllBooks = async (req, res) => {
 };
 
 const updateBookAuthor = async (req, res) => {
+  console.log(req.body);
   try {
     const result = await Book.updateOne(
       { title: req.body.title },
